@@ -1,7 +1,11 @@
 # Tempcel app - Fahrenheit to Celsius converter tool
+![github-header-image](https://github.com/kambla/Tempcel/assets/44547030/08127915-ceff-4fbc-919c-8c111b696085)
+
 ## Description
 This Flask application allows you to convert temperatures from Fahrenheit to Celsius. It uses a random application identifier to avoid conflicts in distributed environments.
 ## Application setup
+You can build app from ```Dockerfile.tempcel``` by  ```docker run -p 5000:5000 kambla2662224/tempcel:1.0``` or set it on kubernetes cluster.
+
 Initiate minikube: Invoke the command ```minikube start``` to commence minikube's operation.
 Establish a Namespace: Type the command ```kubectl create namespace {name}``` to create a dedicated namespace for your application.
 Install Tempcel via Helm: Employ the command ```helm install tempcel-chart/ --generate-name``` to install Tempcel using Helm.
