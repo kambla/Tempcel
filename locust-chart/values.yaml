@@ -1,0 +1,8 @@
+image: locust
+
+targetUrl: "http:127.0.0.1:5000"
+
+numWorkers: 1
+usersPerWorker: 100
+rampTime: 60s
+holdTime: 30s

@@ -1,0 +1,23 @@
+FROM locustio/locust:1.3.1
+
+
+USER $USERNAME
+
+# Use non-root user as a security measure
+RUN groupadd -g 61000 docker
+RUN useradd -g 61000 -l -m -s /bin/false -u 61000 docker
+
+# Set the working directory in the container
+WORKDIR /tempcel
+
+# Add the Locust script into the container
+ADD locustfile.py .
+
+# Expose the Locust web interface port
+EXPOSE 8089
+
+# Define the entry point and command to run Locust
+ENTRYPOINT ["locust", "-f", "locustfile.py"]
+#CMD ["--csv", "/tempcel/tempcel_1.0"]
+
+
