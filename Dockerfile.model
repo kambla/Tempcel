@@ -1,0 +1,5 @@
+FROM tensorflow/serving:latest
+WORKDIR /TensorFlow
+
+COPY saved_model/ /models/model
+CMD ["tensorflow_serving", "--port=8888"]

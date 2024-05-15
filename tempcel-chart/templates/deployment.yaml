@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: tempcel-app
 spec:
-  replicas: 1 # Initial replica count
+  replicas: 1 # Initial replica
   selector:
     matchLabels:
       app: tempcel
