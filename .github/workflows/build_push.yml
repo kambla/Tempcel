@@ -18,7 +18,7 @@ jobs:
         run: |
           docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
       - name: Build the Docker image
-        run: docker build . --file Dockerfiletempcel --tag kambla2662224/tempcel:latest
+        run: docker build . --file Dockerfile.tempcel --tag kambla2662224/tempcel:latest
       - name: Docker Push
         run: docker push kambla2662224/tempcel:latest
 
@@ -34,7 +34,7 @@ jobs:
               run: |
                 docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
             - name: Build the Docker image
-              run: docker build . --file Dockerfilelocust --tag kambla5742224/locust:latest
+              run: docker build . --file Dockerfile.locust --tag kambla5742224/locust:latest
             - name: Docker Push
               run: docker push kambla5742224/locust:latest
   

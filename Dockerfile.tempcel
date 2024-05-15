@@ -1,6 +1,6 @@
 FROM python:slim-bullseye
-WORKDIR /tempcel
-COPY ../app.py .
+WORKDIR /tempcel-main
+COPY ./app.py .
 
 RUN pip install flask
 EXPOSE 5000

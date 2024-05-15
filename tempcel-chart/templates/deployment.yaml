@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: tempcel-app
 spec:
-  replicas: 1 # Initial replica count (will be adjusted by HPA)
+  replicas: 1 # Initial replica count
   selector:
     matchLabels:
       app: tempcel
@@ -18,7 +18,7 @@ spec:
         port:
         - containerPort: 5000
       resources:
-        # Resource requests and limits (adjust as needed)
+        # Resource requests and limits
         requests:
           cpu: 100m
           memory: 128Mi

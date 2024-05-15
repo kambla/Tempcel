@@ -9,4 +9,4 @@ spec:
   - protocol: TCP
     port: 8089
     targetPort: 8089
-  type: NodePort  # Change to NodePort or ClusterIP or LoadBalancer if needed
+  type: NodePort
